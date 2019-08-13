@@ -12,7 +12,7 @@ const creds = require('./Electronic-raffle-draw-5339243d9768.json');
 const doc = new GoogleSpreadsheet('173LyYOUWwjgTDx3f7ySteFBXiBOhYgST57JCZDOCLSo');
 
 
-app.get('/', (req,res)=>{
+app.get('/contestants', (req,res)=>{
     // Authenticate with the Google Spreadsheets API.
     doc.useServiceAccountAuth(creds, function (err) {
     // Get all of the rows from the spreadsheet.
